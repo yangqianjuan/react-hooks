@@ -15,7 +15,6 @@ const callLeftToggle = (hook) => {
 describe('useToggle', () => {
   it('针对基础功能的使用功能', () => {
     const hooks = renderHook(() => useToggle());
-    console.log('hooks', hooks);
     expect(hooks.result.current[0]).toBeFalsy();
   });
 
