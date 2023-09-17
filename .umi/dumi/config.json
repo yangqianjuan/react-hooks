@@ -1,0 +1,63 @@
+{
+  "menus": {
+    "en-US": {
+      "*": [
+        {
+          "path": "/",
+          "title": "首页",
+          "meta": {}
+        }
+      ],
+      "/guide": [
+        {
+          "title": "介绍",
+          "path": "/guide"
+        }
+      ],
+      "/hooks": [
+        {
+          "title": "状态",
+          "children": [
+            {
+              "path": "/hooks/use-toggle",
+              "title": "useToggle"
+            }
+          ]
+        }
+      ],
+      "/": [
+        {
+          "title": "首页",
+          "path": "index"
+        }
+      ]
+    }
+  },
+  "locales": [
+    {
+      "name": "en-US",
+      "label": "English"
+    }
+  ],
+  "navs": {
+    "en-US": [
+      {
+        "title": "指南",
+        "path": "/guide"
+      },
+      {
+        "title": "Hooks",
+        "path": "/hooks"
+      }
+    ]
+  },
+  "title": "encode react hooks",
+  "logo": "/logo.png",
+  "mode": "site",
+  "repository": {
+    "url": "",
+    "branch": "master"
+  },
+  "theme": {},
+  "exportStatic": {}
+}
