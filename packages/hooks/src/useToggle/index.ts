@@ -10,6 +10,7 @@ export interface Actions {
 }
 //默认boolean类型
 
+function useToggle<T = boolean>(defaultValue: T): [T, Actions];
 function useToggle<T = boolean>(): [T, Actions];
 
 function useToggle<D, R>(defaultValue: D, reverseValue: R): [D | R, Actions];
