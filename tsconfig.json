@@ -3,6 +3,7 @@
   "compilerOptions": {
     "target": "ES5", //构建产物是es5的
     "moduleResolution": "node", //文件类型是node
+    "lib": ["ESNext", "dom", "es2015"],
     "jsx": "react",
     "esModuleInterop": true, //结合allowSyntheticDefaultImports一起使用
     "downlevelIteration": true, //可迭代枚举只能将对应代码降级到es5

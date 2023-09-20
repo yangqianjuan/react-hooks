@@ -21,6 +21,27 @@
             {
               "path": "/hooks/use-toggle",
               "title": "useToggle"
+            },
+            {
+              "path": "/hooks/use-boolean",
+              "title": "useBoolean"
+            },
+            {
+              "path": "/hooks/use-latest",
+              "title": "useLatest"
+            },
+            {
+              "path": "/hooks/use-debounce",
+              "title": "useDebounce"
+            }
+          ]
+        },
+        {
+          "title": "DOM",
+          "children": [
+            {
+              "path": "/hooks/use-title",
+              "title": "useTitle"
             }
           ]
         }

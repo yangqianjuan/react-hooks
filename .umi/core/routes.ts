@@ -13,7 +13,7 @@ export function getRoutes() {
     "component": ((props) => dynamic({
           loader: async () => {
             const React = await import('react');
-            const { default: getDemoRenderArgs } = await import(/* webpackChunkName: 'dumi_demos' */ '/Users/yangqianlu/Desktop/hooks实战练习/reactDemoHooks/node_modules/.pnpm/@umijs+preset-dumi@1.1.48_react-dom@18.2.0_react-router@6.4.2_react@18.2.0_typescript@5.1.3_umi@3.5.41/node_modules/@umijs/preset-dumi/lib/plugins/features/demo/getDemoRenderArgs');
+            const { default: getDemoRenderArgs } = await import(/* webpackChunkName: 'dumi_demos' */ '/Users/yangqianlu/Desktop/hooks实战练习/reactDemoHooks/node_modules/.pnpm/@umijs+preset-dumi@1.1.48_react-dom@18.2.0_react-router@6.4.2_react@18.2.0_typescript@4.3.2_umi@3.5.41/node_modules/@umijs/preset-dumi/lib/plugins/features/demo/getDemoRenderArgs');
             const { default: Previewer } = await import(/* webpackChunkName: 'dumi_demos' */ 'dumi-theme-default/es/builtins/Previewer.js');
             const { usePrefersColor, context } = await import(/* webpackChunkName: 'dumi_demos' */ 'dumi/theme');
 
@@ -191,6 +191,114 @@ export function getRoutes() {
           }
         },
         "title": "encode-hooks - encode react hooks"
+      },
+      {
+        "path": "/hooks/use-boolean",
+        "component": dynamic({ loader: () => import(/* webpackChunkName: 'packages__hooks__src__useBoolean__index.md' */'/Users/yangqianlu/Desktop/hooks实战练习/reactDemoHooks/packages/hooks/src/useBoolean/index.md')}),
+        "exact": true,
+        "meta": {
+          "filePath": "packages/hooks/src/useBoolean/index.md",
+          "updatedTime": 1695027869000,
+          "nav": {
+            "path": "/hooks",
+            "title": "UseBoolean"
+          },
+          "slugs": [
+            {
+              "depth": 1,
+              "value": "useBoolean",
+              "heading": "useboolean"
+            }
+          ],
+          "title": "useBoolean",
+          "hasPreviewer": true,
+          "group": {
+            "path": "/hooks/use-boolean",
+            "title": "UseBoolean"
+          }
+        },
+        "title": "useBoolean - encode react hooks"
+      },
+      {
+        "path": "/hooks/use-debounce",
+        "component": dynamic({ loader: () => import(/* webpackChunkName: 'packages__hooks__src__useDebounce__index.md' */'/Users/yangqianlu/Desktop/hooks实战练习/reactDemoHooks/packages/hooks/src/useDebounce/index.md')}),
+        "exact": true,
+        "meta": {
+          "filePath": "packages/hooks/src/useDebounce/index.md",
+          "updatedTime": 1695197754666,
+          "nav": {
+            "path": "/hooks",
+            "title": "UseDebounce"
+          },
+          "slugs": [
+            {
+              "depth": 1,
+              "value": "useDebounce",
+              "heading": "usedebounce"
+            }
+          ],
+          "title": "useDebounce",
+          "hasPreviewer": true,
+          "group": {
+            "path": "/hooks/use-debounce",
+            "title": "UseDebounce"
+          }
+        },
+        "title": "useDebounce - encode react hooks"
+      },
+      {
+        "path": "/hooks/use-latest",
+        "component": dynamic({ loader: () => import(/* webpackChunkName: 'packages__hooks__src__useLatest__index.md' */'/Users/yangqianlu/Desktop/hooks实战练习/reactDemoHooks/packages/hooks/src/useLatest/index.md')}),
+        "exact": true,
+        "meta": {
+          "filePath": "packages/hooks/src/useLatest/index.md",
+          "updatedTime": 1695193224900,
+          "nav": {
+            "path": "/hooks",
+            "title": "UseLatest"
+          },
+          "slugs": [
+            {
+              "depth": 1,
+              "value": "useLatest",
+              "heading": "uselatest"
+            }
+          ],
+          "title": "useLatest",
+          "hasPreviewer": true,
+          "group": {
+            "path": "/hooks/use-latest",
+            "title": "UseLatest"
+          }
+        },
+        "title": "useLatest - encode react hooks"
+      },
+      {
+        "path": "/hooks/use-title",
+        "component": dynamic({ loader: () => import(/* webpackChunkName: 'packages__hooks__src__useTitle__index.md' */'/Users/yangqianlu/Desktop/hooks实战练习/reactDemoHooks/packages/hooks/src/useTitle/index.md')}),
+        "exact": true,
+        "meta": {
+          "filePath": "packages/hooks/src/useTitle/index.md",
+          "updatedTime": 1695193229467,
+          "nav": {
+            "path": "/hooks",
+            "title": "UseTitle"
+          },
+          "slugs": [
+            {
+              "depth": 1,
+              "value": "useTitle",
+              "heading": "usetitle"
+            }
+          ],
+          "title": "useTitle",
+          "hasPreviewer": true,
+          "group": {
+            "path": "/hooks/use-title",
+            "title": "UseTitle"
+          }
+        },
+        "title": "useTitle - encode react hooks"
       },
       {
         "path": "/hooks/use-toggle",
