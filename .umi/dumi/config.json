@@ -31,8 +31,17 @@
               "title": "useLatest"
             },
             {
-              "path": "/hooks/use-debounce",
-              "title": "useDebounce"
+              "path": "/hooks/use-update",
+              "title": "useUpdate"
+            }
+          ]
+        },
+        {
+          "title": "请求",
+          "children": [
+            {
+              "path": "/hooks/use-request",
+              "title": "useRequest"
             }
           ]
         },
@@ -42,6 +51,10 @@
             {
               "path": "/hooks/use-title",
               "title": "useTitle"
+            },
+            {
+              "path": "/hooks/use-debounce",
+              "title": "useDebounce"
             }
           ]
         }

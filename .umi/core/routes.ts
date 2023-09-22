@@ -225,7 +225,7 @@ export function getRoutes() {
         "exact": true,
         "meta": {
           "filePath": "packages/hooks/src/useDebounce/index.md",
-          "updatedTime": 1695197754666,
+          "updatedTime": 1695206336000,
           "nav": {
             "path": "/hooks",
             "title": "UseDebounce"
@@ -252,7 +252,7 @@ export function getRoutes() {
         "exact": true,
         "meta": {
           "filePath": "packages/hooks/src/useLatest/index.md",
-          "updatedTime": 1695193224900,
+          "updatedTime": 1695206336000,
           "nav": {
             "path": "/hooks",
             "title": "UseLatest"
@@ -274,12 +274,39 @@ export function getRoutes() {
         "title": "useLatest - encode react hooks"
       },
       {
+        "path": "/hooks/use-request",
+        "component": dynamic({ loader: () => import(/* webpackChunkName: 'packages__hooks__src__useRequest__index.md' */'/Users/yangqianlu/Desktop/hooks实战练习/reactDemoHooks/packages/hooks/src/useRequest/index.md')}),
+        "exact": true,
+        "meta": {
+          "filePath": "packages/hooks/src/useRequest/index.md",
+          "updatedTime": 1695368160921,
+          "nav": {
+            "path": "/hooks",
+            "title": "UseRequest"
+          },
+          "slugs": [
+            {
+              "depth": 1,
+              "value": "useRequest",
+              "heading": "userequest"
+            }
+          ],
+          "title": "useRequest",
+          "hasPreviewer": true,
+          "group": {
+            "path": "/hooks/use-request",
+            "title": "UseRequest"
+          }
+        },
+        "title": "useRequest - encode react hooks"
+      },
+      {
         "path": "/hooks/use-title",
         "component": dynamic({ loader: () => import(/* webpackChunkName: 'packages__hooks__src__useTitle__index.md' */'/Users/yangqianlu/Desktop/hooks实战练习/reactDemoHooks/packages/hooks/src/useTitle/index.md')}),
         "exact": true,
         "meta": {
           "filePath": "packages/hooks/src/useTitle/index.md",
-          "updatedTime": 1695193229467,
+          "updatedTime": 1695206336000,
           "nav": {
             "path": "/hooks",
             "title": "UseTitle"
@@ -326,6 +353,33 @@ export function getRoutes() {
           }
         },
         "title": "useToggle - encode react hooks"
+      },
+      {
+        "path": "/hooks/use-update",
+        "component": dynamic({ loader: () => import(/* webpackChunkName: 'packages__hooks__src__useUpdate__index.md' */'/Users/yangqianlu/Desktop/hooks实战练习/reactDemoHooks/packages/hooks/src/useUpdate/index.md')}),
+        "exact": true,
+        "meta": {
+          "filePath": "packages/hooks/src/useUpdate/index.md",
+          "updatedTime": 1695358037505,
+          "nav": {
+            "path": "/hooks",
+            "title": "UseUpdate"
+          },
+          "slugs": [
+            {
+              "depth": 1,
+              "value": "useUpdate",
+              "heading": "useupdate"
+            }
+          ],
+          "title": "useUpdate",
+          "hasPreviewer": true,
+          "group": {
+            "path": "/hooks/use-update",
+            "title": "UseUpdate"
+          }
+        },
+        "title": "useUpdate - encode react hooks"
       },
       {
         "path": "/hooks",
