@@ -279,7 +279,7 @@ export function getRoutes() {
         "exact": true,
         "meta": {
           "filePath": "packages/hooks/src/useRequest/index.md",
-          "updatedTime": 1695368160921,
+          "updatedTime": 1695387595000,
           "nav": {
             "path": "/hooks",
             "title": "UseRequest"
@@ -299,6 +299,147 @@ export function getRoutes() {
           }
         },
         "title": "useRequest - encode react hooks"
+      },
+      {
+        "path": "/hooks/use-request/default",
+        "component": dynamic({ loader: () => import(/* webpackChunkName: 'packages__hooks__src__useRequest__doc__default__index.md' */'/Users/yangqianlu/Desktop/hooks实战练习/reactDemoHooks/packages/hooks/src/useRequest/doc/default/index.md')}),
+        "exact": true,
+        "meta": {
+          "filePath": "packages/hooks/src/useRequest/doc/default/index.md",
+          "updatedTime": 1695549322023,
+          "nav": {
+            "path": "/hooks",
+            "title": "UseRequest"
+          },
+          "group": {
+            "path": "/hooks/use-request",
+            "title": "Doc"
+          },
+          "slugs": [
+            {
+              "depth": 1,
+              "value": "基础用法",
+              "heading": "基础用法"
+            },
+            {
+              "depth": 2,
+              "value": "默认请求",
+              "heading": "默认请求"
+            },
+            {
+              "depth": 2,
+              "value": "手动触发",
+              "heading": "手动触发"
+            },
+            {
+              "depth": 2,
+              "value": "参数管理",
+              "heading": "参数管理"
+            },
+            {
+              "depth": 2,
+              "value": "刷新（重复上一次请求）",
+              "heading": "刷新重复上一次请求"
+            },
+            {
+              "depth": 2,
+              "value": "立即变更数据",
+              "heading": "立即变更数据"
+            },
+            {
+              "depth": 2,
+              "value": "生命周期",
+              "heading": "生命周期"
+            },
+            {
+              "depth": 3,
+              "value": "Result",
+              "heading": "result"
+            },
+            {
+              "depth": 3,
+              "value": "Options",
+              "heading": "options"
+            }
+          ],
+          "title": "基础用法",
+          "hasPreviewer": true
+        },
+        "title": "基础用法 - encode react hooks"
+      },
+      {
+        "path": "/hooks/use-request/index",
+        "component": dynamic({ loader: () => import(/* webpackChunkName: 'packages__hooks__src__useRequest__doc__index__index.md' */'/Users/yangqianlu/Desktop/hooks实战练习/reactDemoHooks/packages/hooks/src/useRequest/doc/index/index.md')}),
+        "exact": true,
+        "meta": {
+          "filePath": "packages/hooks/src/useRequest/doc/index/index.md",
+          "updatedTime": 1695546411986,
+          "nav": {
+            "path": "/hooks",
+            "title": "UseRequest"
+          },
+          "group": {
+            "path": "/hooks/use-request",
+            "title": "Doc"
+          },
+          "slugs": [
+            {
+              "depth": 1,
+              "value": "快速上手",
+              "heading": "快速上手"
+            },
+            {
+              "depth": 2,
+              "value": "默认用法",
+              "heading": "默认用法"
+            },
+            {
+              "depth": 2,
+              "value": "手动触发",
+              "heading": "手动触发"
+            }
+          ],
+          "title": "快速上手",
+          "hasPreviewer": true
+        },
+        "title": "快速上手 - encode react hooks"
+      },
+      {
+        "path": "/hooks/use-request/loading-delay",
+        "component": dynamic({ loader: () => import(/* webpackChunkName: 'packages__hooks__src__useRequest__doc__loadingDelay__loadingDelay.md' */'/Users/yangqianlu/Desktop/hooks实战练习/reactDemoHooks/packages/hooks/src/useRequest/doc/loadingDelay/loadingDelay.md')}),
+        "exact": true,
+        "meta": {
+          "filePath": "packages/hooks/src/useRequest/doc/loadingDelay/loadingDelay.md",
+          "updatedTime": 1695551412039,
+          "nav": {
+            "path": "/hooks",
+            "title": "UseRequest"
+          },
+          "group": {
+            "path": "/hooks/use-request",
+            "title": "Doc"
+          },
+          "slugs": [
+            {
+              "depth": 1,
+              "value": "Loading Delay",
+              "heading": "loading-delay"
+            },
+            {
+              "depth": 2,
+              "value": "API",
+              "heading": "api"
+            },
+            {
+              "depth": 2,
+              "value": "备注",
+              "heading": "备注"
+            }
+          ],
+          "title": "Loading Delay",
+          "hasPreviewer": true
+        },
+        "title": "Loading Delay - encode react hooks"
       },
       {
         "path": "/hooks/use-title",
@@ -360,7 +501,7 @@ export function getRoutes() {
         "exact": true,
         "meta": {
           "filePath": "packages/hooks/src/useUpdate/index.md",
-          "updatedTime": 1695358037505,
+          "updatedTime": 1695387595000,
           "nav": {
             "path": "/hooks",
             "title": "UseUpdate"
