@@ -40,8 +40,16 @@
           "title": "请求",
           "children": [
             {
-              "path": "/hooks/use-request",
-              "title": "useRequest"
+              "path": "/hooks/use-request/index",
+              "title": "快速上手"
+            },
+            {
+              "path": "/hooks/use-request/default",
+              "title": "基础用法"
+            },
+            {
+              "path": "/hooks/use-request/loading-delay",
+              "title": "Loading Delay"
             }
           ]
         },

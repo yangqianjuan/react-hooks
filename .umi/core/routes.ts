@@ -306,7 +306,7 @@ export function getRoutes() {
         "exact": true,
         "meta": {
           "filePath": "packages/hooks/src/useRequest/doc/default/index.md",
-          "updatedTime": 1695549322023,
+          "updatedTime": 1695551586000,
           "nav": {
             "path": "/hooks",
             "title": "UseRequest"
@@ -373,7 +373,7 @@ export function getRoutes() {
         "exact": true,
         "meta": {
           "filePath": "packages/hooks/src/useRequest/doc/index/index.md",
-          "updatedTime": 1695546411986,
+          "updatedTime": 1695551586000,
           "nav": {
             "path": "/hooks",
             "title": "UseRequest"
@@ -410,7 +410,7 @@ export function getRoutes() {
         "exact": true,
         "meta": {
           "filePath": "packages/hooks/src/useRequest/doc/loadingDelay/loadingDelay.md",
-          "updatedTime": 1695551412039,
+          "updatedTime": 1695551586000,
           "nav": {
             "path": "/hooks",
             "title": "UseRequest"
