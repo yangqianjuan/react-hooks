@@ -33,6 +33,10 @@
             {
               "path": "/hooks/use-update",
               "title": "useUpdate"
+            },
+            {
+              "path": "/hooks/use-memorized-fn",
+              "title": "useMemorizedFn"
             }
           ]
         },

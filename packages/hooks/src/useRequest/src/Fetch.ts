@@ -1,3 +1,4 @@
+import { MutableRefObject } from 'react';
 import { Service, Options, PluginReturn } from './types';
 interface FetchState<TData, TParams> {
   loading: boolean;
@@ -15,7 +16,7 @@ export default class Fetch<Tdata, Tparams extends []> {
     error: undefined,
   };
   constructor(
-    public serviceRef: Service<Tdata, Tparams>,
+    public serviceRef: MutableRefObject<Service<Tdata, Tparams>>,
     public options: Options<Tdata, Tparams>,
     public update: () => void,
     public initState: Partial<FetchState<Tdata, Tparams>> = {},
@@ -28,6 +29,7 @@ export default class Fetch<Tdata, Tparams extends []> {
   }
   runPluginHandler(event: keyof PluginReturn<Tdata, Tparams>, ...rest) {
     const r = this.pluginImpls.map((i) => i[event]?.(...rest)?.filter(Boolean));
+
     return Object.assign({}, ...r);
   }
   setState(s: Partial<FetchState<Tdata, Tparams>> = {}) {

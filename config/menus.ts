@@ -1,7 +1,13 @@
 export const menus = [
   {
     title: '状态',
-    children: ['useToggle', 'useBoolean', 'useLatest', 'useUpdate'],
+    children: [
+      'useToggle',
+      'useBoolean',
+      'useLatest',
+      'useUpdate',
+      'useMemorizedFn',
+    ],
   },
   {
     title: '请求',

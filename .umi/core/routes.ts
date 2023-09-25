@@ -274,6 +274,32 @@ export function getRoutes() {
         "title": "useLatest - encode react hooks"
       },
       {
+        "path": "/hooks/use-memorized-fn",
+        "component": dynamic({ loader: () => import(/* webpackChunkName: 'packages__hooks__src__useMemorizedFn__index.md' */'/Users/yangqianlu/Desktop/hooks实战练习/reactDemoHooks/packages/hooks/src/useMemorizedFn/index.md')}),
+        "exact": true,
+        "meta": {
+          "filePath": "packages/hooks/src/useMemorizedFn/index.md",
+          "updatedTime": 1695643504450,
+          "nav": {
+            "path": "/hooks",
+            "title": "UseMemorizedFn"
+          },
+          "slugs": [
+            {
+              "depth": 1,
+              "value": "useMemorizedFn",
+              "heading": "usememorizedfn"
+            }
+          ],
+          "title": "useMemorizedFn",
+          "group": {
+            "path": "/hooks/use-memorized-fn",
+            "title": "UseMemorizedFn"
+          }
+        },
+        "title": "useMemorizedFn - encode react hooks"
+      },
+      {
         "path": "/hooks/use-request",
         "component": dynamic({ loader: () => import(/* webpackChunkName: 'packages__hooks__src__useRequest__index.md' */'/Users/yangqianlu/Desktop/hooks实战练习/reactDemoHooks/packages/hooks/src/useRequest/index.md')}),
         "exact": true,
@@ -306,7 +332,7 @@ export function getRoutes() {
         "exact": true,
         "meta": {
           "filePath": "packages/hooks/src/useRequest/doc/default/index.md",
-          "updatedTime": 1695551586000,
+          "updatedTime": 1695622954000,
           "nav": {
             "path": "/hooks",
             "title": "UseRequest"
