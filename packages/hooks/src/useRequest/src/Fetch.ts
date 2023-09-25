@@ -1,4 +1,4 @@
-import { Service, Options } from './types';
+import { Service, Options, PluginReturn } from './types';
 interface FetchState<TData, TParams> {
   loading: boolean;
   params?: TParams;
@@ -6,6 +6,7 @@ interface FetchState<TData, TParams> {
   error?: Error;
 }
 export default class Fetch<Tdata, Tparams extends []> {
+  pluginImpls: PluginReturn<Tdata, Tparams>[];
   count: number = 0;
   state: FetchState<Tdata, Tparams> = {
     loading: false,
@@ -17,11 +18,17 @@ export default class Fetch<Tdata, Tparams extends []> {
     public serviceRef: Service<Tdata, Tparams>,
     public options: Options<Tdata, Tparams>,
     public update: () => void,
+    public initState: Partial<FetchState<Tdata, Tparams>> = {},
   ) {
     this.state = {
       ...this.state,
       loading: !options.manual,
+      ...initState,
     };
+  }
+  runPluginHandler(event: keyof PluginReturn<Tdata, Tparams>, ...rest) {
+    const r = this.pluginImpls.map((i) => i[event]?.(...rest)?.filter(Boolean));
+    return Object.assign({}, ...r);
   }
   setState(s: Partial<FetchState<Tdata, Tparams>> = {}) {
     this.state = {
@@ -39,19 +46,79 @@ export default class Fetch<Tdata, Tparams extends []> {
   async runAsync(...params: Tparams): Promise<Tdata> {
     this.count += 1;
     const currentCount = this.count;
+    const {
+      stopNow = false,
+      returnNow = false,
+      ...state
+    } = this.runPluginHandler('onBefore', params);
 
-    this.setState({ loading: true });
+    // stop request
+    if (stopNow) {
+      return new Promise(() => {});
+    }
+    this.setState({ loading: true, params, ...state });
+    if (returnNow) {
+      return Promise.resolve(state.data);
+    }
 
+    this.options.onBefore?.(params);
     try {
-      const res = await this.serviceRef.current(...params);
-      // if(currentCount!==this.count){
-      //   说明不是一个请求
-      // }
-      // debugger;
-      this.setState({ data: res, error: undefined, loading: false });
+      // replace service
+      let { servicePromise } = this.runPluginHandler(
+        'onRequest',
+        this.serviceRef.current,
+        params,
+      );
+
+      if (!servicePromise) {
+        servicePromise = this.serviceRef.current(...params);
+      }
+
+      const res = await servicePromise;
+
+      if (currentCount !== this.count) {
+        // prevent run.then when request is canceled
+        return new Promise(() => {});
+      }
+
+      // const formattedResult = this.options.formatResultRef.current ? this.options.formatResultRef.current(res) : res;
+
+      this.setState({
+        data: res,
+        error: undefined,
+        loading: false,
+      });
+
+      this.options.onSuccess?.(res, params);
+      this.runPluginHandler('onSuccess', res, params);
+
+      this.options.onFinally?.(params, res, undefined);
+
+      if (currentCount === this.count) {
+        this.runPluginHandler('onFinally', params, res, undefined);
+      }
+
       return res;
     } catch (error) {
-      this.setState({ error, loading: false });
+      if (currentCount !== this.count) {
+        // prevent run.then when request is canceled
+        return new Promise(() => {});
+      }
+
+      this.setState({
+        error,
+        loading: false,
+      });
+
+      this.options.onError?.(error, params);
+      this.runPluginHandler('onError', error, params);
+
+      this.options.onFinally?.(params, undefined, error);
+
+      if (currentCount === this.count) {
+        this.runPluginHandler('onFinally', params, undefined, error);
+      }
+
       throw error;
     }
   }
@@ -64,5 +131,6 @@ export default class Fetch<Tdata, Tparams extends []> {
   cancel() {
     this.count += 1;
     this.setState({ loading: false });
+    this.runPluginHandler('onCancel');
   }
 }

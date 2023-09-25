@@ -352,6 +352,11 @@ export function getRoutes() {
               "heading": "生命周期"
             },
             {
+              "depth": 2,
+              "value": "取消响应",
+              "heading": "取消响应"
+            },
+            {
               "depth": 3,
               "value": "Result",
               "heading": "result"

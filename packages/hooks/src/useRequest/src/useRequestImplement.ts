@@ -3,7 +3,7 @@ import { useMemo, useEffect } from 'react';
 import useLatest from '../../useLatest';
 import useUpdate from '../../useUpdate';
 import useMemorizedFn from '../../useMemorizedFn';
-import { Service, Options } from '../../utils';
+import { Service, Options, Plugin } from './types';
 import Fetch from './Fetch';
 
 const useMount = (fn: () => void) => {
@@ -18,19 +18,38 @@ const useUnmount = (fn: () => void) => {
 function useRequestImplement<Tdata, Tparams extends []>(
   Service: Service<Tdata, Tparams>,
   options: Options<Tdata, Tparams> = {},
+  plugins: Plugin<Tdata, Tparams>[] = [],
 ) {
-  const { manual = false } = options;
+  const { manual = false, ...rest } = options;
   //基于原有的service发送请求，避免闭包
   const serviceRef = useLatest(Service);
 
+  const fetchOptions = {
+    manual,
+    ...rest,
+  };
   // 出发组件的更新useUpdate
   const update = useUpdate();
   const fetchInstance = useMemo(() => {
     // 给plugin去使用
     // 返回真实的fetch构造实例
+    const initState = plugins
+      .map((p) => p?.onInit?.(fetchOptions))
+      .filter(Boolean);
 
-    return new Fetch<Tdata, Tparams>(serviceRef, options, update);
+    return new Fetch<Tdata, Tparams>(
+      serviceRef,
+      options,
+      update,
+      Object.assign({}, ...initState),
+    );
   }, []);
+
+  // fetchInstance.options = fetchOptions;
+  // run all plugins hooks
+  fetchInstance.pluginImpls = plugins.map((p) =>
+    p(fetchInstance, fetchOptions),
+  );
   useMount(() => {
     if (!manual) {
       const params = fetchInstance.state.params;

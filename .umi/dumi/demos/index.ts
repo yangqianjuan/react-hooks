@@ -11,13 +11,14 @@ import rawCode7 from '!!dumi-raw-code-loader!/Users/yangqianlu/Desktop/hooks实�
 import rawCode8 from '!!dumi-raw-code-loader!/Users/yangqianlu/Desktop/hooks实战练习/reactDemoHooks/packages/hooks/src/useRequest/doc/default/demo/refresh.tsx?dumi-raw-code';
 import rawCode9 from '!!dumi-raw-code-loader!/Users/yangqianlu/Desktop/hooks实战练习/reactDemoHooks/packages/hooks/src/useRequest/doc/default/demo/mutate.tsx?dumi-raw-code';
 import rawCode10 from '!!dumi-raw-code-loader!/Users/yangqianlu/Desktop/hooks实战练习/reactDemoHooks/packages/hooks/src/useRequest/doc/default/demo/lifeCycle.tsx?dumi-raw-code';
-import rawCode11 from '!!dumi-raw-code-loader!/Users/yangqianlu/Desktop/hooks实战练习/reactDemoHooks/packages/hooks/src/useRequest/doc/index/demo/default.tsx?dumi-raw-code';
-import rawCode12 from '!!dumi-raw-code-loader!/Users/yangqianlu/Desktop/hooks实战练习/reactDemoHooks/packages/hooks/src/useRequest/doc/index/demo/manual.tsx?dumi-raw-code';
-import rawCode13 from '!!dumi-raw-code-loader!/Users/yangqianlu/Desktop/hooks实战练习/reactDemoHooks/packages/hooks/src/useRequest/doc/loadingDelay/demo/loadingDelay.tsx?dumi-raw-code';
-import rawCode14 from '!!dumi-raw-code-loader!/Users/yangqianlu/Desktop/hooks实战练习/reactDemoHooks/packages/hooks/src/useTitle/demo/demo1.tsx?dumi-raw-code';
-import rawCode15 from '!!dumi-raw-code-loader!/Users/yangqianlu/Desktop/hooks实战练习/reactDemoHooks/packages/hooks/src/useToggle/demo/demo1.tsx?dumi-raw-code';
-import rawCode16 from '!!dumi-raw-code-loader!/Users/yangqianlu/Desktop/hooks实战练习/reactDemoHooks/packages/hooks/src/useToggle/demo/demo2.tsx?dumi-raw-code';
-import rawCode17 from '!!dumi-raw-code-loader!/Users/yangqianlu/Desktop/hooks实战练习/reactDemoHooks/packages/hooks/src/useUpdate/demo/demo1.tsx?dumi-raw-code';
+import rawCode11 from '!!dumi-raw-code-loader!/Users/yangqianlu/Desktop/hooks实战练习/reactDemoHooks/packages/hooks/src/useRequest/doc/default/demo/cancel.tsx?dumi-raw-code';
+import rawCode12 from '!!dumi-raw-code-loader!/Users/yangqianlu/Desktop/hooks实战练习/reactDemoHooks/packages/hooks/src/useRequest/doc/index/demo/default.tsx?dumi-raw-code';
+import rawCode13 from '!!dumi-raw-code-loader!/Users/yangqianlu/Desktop/hooks实战练习/reactDemoHooks/packages/hooks/src/useRequest/doc/index/demo/manual.tsx?dumi-raw-code';
+import rawCode14 from '!!dumi-raw-code-loader!/Users/yangqianlu/Desktop/hooks实战练习/reactDemoHooks/packages/hooks/src/useRequest/doc/loadingDelay/demo/loadingDelay.tsx?dumi-raw-code';
+import rawCode15 from '!!dumi-raw-code-loader!/Users/yangqianlu/Desktop/hooks实战练习/reactDemoHooks/packages/hooks/src/useTitle/demo/demo1.tsx?dumi-raw-code';
+import rawCode16 from '!!dumi-raw-code-loader!/Users/yangqianlu/Desktop/hooks实战练习/reactDemoHooks/packages/hooks/src/useToggle/demo/demo1.tsx?dumi-raw-code';
+import rawCode17 from '!!dumi-raw-code-loader!/Users/yangqianlu/Desktop/hooks实战练习/reactDemoHooks/packages/hooks/src/useToggle/demo/demo2.tsx?dumi-raw-code';
+import rawCode18 from '!!dumi-raw-code-loader!/Users/yangqianlu/Desktop/hooks实战练习/reactDemoHooks/packages/hooks/src/useUpdate/demo/demo1.tsx?dumi-raw-code';
 
 export default {
   'useboolean-demo1': {
@@ -90,53 +91,60 @@ export default {
     }),
     previewerProps: {"sources":{"_":{"tsx":rawCode10}},"dependencies":{"antd":{"version":"5.2.1"},"react":{"version":">=16.9.0"},"react-dom":{"version":">=16.9.0"}},"identifier":"default-lifecycle"},
   },
+  'default-cancel': {
+    component: dynamic({
+      loader: async () => (await import(/* webpackChunkName: "demos_no_comp" */'/Users/yangqianlu/Desktop/hooks实战练习/reactDemoHooks/packages/hooks/src/useRequest/doc/default/demo/cancel.tsx')).default,
+      loading: () => null,
+    }),
+    previewerProps: {"sources":{"_":{"tsx":rawCode11}},"dependencies":{"antd":{"version":"5.2.1"},"react":{"version":">=16.9.0"},"react-dom":{"version":">=16.9.0"}},"identifier":"default-cancel"},
+  },
   'index-default': {
     component: dynamic({
       loader: async () => (await import(/* webpackChunkName: "demos_no_comp" */'/Users/yangqianlu/Desktop/hooks实战练习/reactDemoHooks/packages/hooks/src/useRequest/doc/index/demo/default.tsx')).default,
       loading: () => null,
     }),
-    previewerProps: {"sources":{"_":{"tsx":rawCode11}},"dependencies":{"react":{"version":"18.2.0"},"mockjs":{"version":"1.1.0"}},"identifier":"index-default"},
+    previewerProps: {"sources":{"_":{"tsx":rawCode12}},"dependencies":{"react":{"version":"18.2.0"},"mockjs":{"version":"1.1.0"}},"identifier":"index-default"},
   },
   'index-manual': {
     component: dynamic({
       loader: async () => (await import(/* webpackChunkName: "demos_no_comp" */'/Users/yangqianlu/Desktop/hooks实战练习/reactDemoHooks/packages/hooks/src/useRequest/doc/index/demo/manual.tsx')).default,
       loading: () => null,
     }),
-    previewerProps: {"sources":{"_":{"tsx":rawCode12}},"dependencies":{"react":{"version":">=16.9.0"},"antd":{"version":"5.2.1"},"mockjs":{"version":"1.1.0"},"react-dom":{"version":">=16.9.0"}},"identifier":"index-manual"},
+    previewerProps: {"sources":{"_":{"tsx":rawCode13}},"dependencies":{"react":{"version":">=16.9.0"},"antd":{"version":"5.2.1"},"mockjs":{"version":"1.1.0"},"react-dom":{"version":">=16.9.0"}},"identifier":"index-manual"},
   },
   'loadingdelay-loadingdelay': {
     component: dynamic({
       loader: async () => (await import(/* webpackChunkName: "demos_no_comp" */'/Users/yangqianlu/Desktop/hooks实战练习/reactDemoHooks/packages/hooks/src/useRequest/doc/loadingDelay/demo/loadingDelay.tsx')).default,
       loading: () => null,
     }),
-    previewerProps: {"sources":{"_":{"tsx":rawCode13}},"dependencies":{"react":{"version":"18.2.0"},"mockjs":{"version":"1.1.0"}},"identifier":"loadingdelay-loadingdelay"},
+    previewerProps: {"sources":{"_":{"tsx":rawCode14}},"dependencies":{"react":{"version":"18.2.0"},"mockjs":{"version":"1.1.0"}},"identifier":"loadingdelay-loadingdelay"},
   },
   'usetitle-demo1': {
     component: dynamic({
       loader: async () => (await import(/* webpackChunkName: "demos_no_comp" */'/Users/yangqianlu/Desktop/hooks实战练习/reactDemoHooks/packages/hooks/src/useTitle/demo/demo1.tsx')).default,
       loading: () => null,
     }),
-    previewerProps: {"sources":{"_":{"tsx":rawCode14}},"dependencies":{"react":{"version":"18.2.0"}},"identifier":"usetitle-demo1"},
+    previewerProps: {"sources":{"_":{"tsx":rawCode15}},"dependencies":{"react":{"version":"18.2.0"}},"identifier":"usetitle-demo1"},
   },
   'usetoggle-demo1': {
     component: dynamic({
       loader: async () => (await import(/* webpackChunkName: "demos_no_comp" */'/Users/yangqianlu/Desktop/hooks实战练习/reactDemoHooks/packages/hooks/src/useToggle/demo/demo1.tsx')).default,
       loading: () => null,
     }),
-    previewerProps: {"sources":{"_":{"tsx":rawCode15}},"dependencies":{"react":{"version":"18.2.0"}},"identifier":"usetoggle-demo1"},
+    previewerProps: {"sources":{"_":{"tsx":rawCode16}},"dependencies":{"react":{"version":"18.2.0"}},"identifier":"usetoggle-demo1"},
   },
   'usetoggle-demo2': {
     component: dynamic({
       loader: async () => (await import(/* webpackChunkName: "demos_no_comp" */'/Users/yangqianlu/Desktop/hooks实战练习/reactDemoHooks/packages/hooks/src/useToggle/demo/demo2.tsx')).default,
       loading: () => null,
     }),
-    previewerProps: {"sources":{"_":{"tsx":rawCode16}},"dependencies":{"react":{"version":"18.2.0"}},"identifier":"usetoggle-demo2"},
+    previewerProps: {"sources":{"_":{"tsx":rawCode17}},"dependencies":{"react":{"version":"18.2.0"}},"identifier":"usetoggle-demo2"},
   },
   'useupdate-demo1': {
     component: dynamic({
       loader: async () => (await import(/* webpackChunkName: "demos_no_comp" */'/Users/yangqianlu/Desktop/hooks实战练习/reactDemoHooks/packages/hooks/src/useUpdate/demo/demo1.tsx')).default,
       loading: () => null,
     }),
-    previewerProps: {"sources":{"_":{"tsx":rawCode17}},"dependencies":{"react":{"version":"18.2.0"}},"identifier":"useupdate-demo1"},
+    previewerProps: {"sources":{"_":{"tsx":rawCode18}},"dependencies":{"react":{"version":"18.2.0"}},"identifier":"useupdate-demo1"},
   },
 };

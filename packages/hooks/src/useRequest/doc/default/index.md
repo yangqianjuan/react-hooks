@@ -78,6 +78,19 @@ const { loading, run, runAsync } = useRequest(service, {
 - `onFinally`：请求完成触发
 
 <code src="./demo/lifeCycle.tsx" />
+
+## 取消响应
+
+`useRequest` 提供了 `cancel` 函数，用于**忽略**当前 promise 返回的数据和错误
+
+**注意：调用 `cancel` 函数并不会取消 promise 的执行**
+
+同时 `useRequest` 会在以下时机自动忽略响应：
+
+- 组件卸载时，正在进行的 promise
+- 竞态取消，当上一次 promise 还没返回时，又发起了下一次 promise，则会忽略上一次 promise 的响应
+
+<code src="./demo/cancel.tsx" />
 ## API
 
 ```ts
