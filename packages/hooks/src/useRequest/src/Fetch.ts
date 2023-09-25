@@ -1,5 +1,4 @@
-import { Service, Options } from '../../utils';
-// import type { MutableRefObject } from 'react';
+import { Service, Options } from './types';
 interface FetchState<TData, TParams> {
   loading: boolean;
   params?: TParams;

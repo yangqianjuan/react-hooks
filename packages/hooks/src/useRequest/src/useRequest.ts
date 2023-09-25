@@ -1,5 +1,5 @@
 import useRequestImplement from './useRequestImplement';
-import { Service, Options } from '../../utils';
+import { Service, Options } from './types';
 function useRequest<Tdata, Tparams extends []>(
   Service: Service<Tdata, Tparams>,
   options?: Options<Tdata, Tparams>,
